@@ -104,14 +104,11 @@
             align-items: center;
             gap: 5px;
             transition: background 0.3s;
+            -webkit-tap-highlight-color: transparent;
         }
 
         .play-btn:hover {
             background-color: #ff6b81;
-        }
-
-        .play-btn:active {
-            transform: scale(0.95);
         }
 
         .tip-box {
@@ -138,217 +135,175 @@
     </header>
 
     <div class="intro">
-        <p>안녕하세요! 만나서 반가워요！我是來自首爾的朋友。為了讓你在韓國旅遊時能順利溝通，點擊下方的播放按鈕即可聽取發音。</p>
+        <p>안녕하세요! 點擊播放按鈕即可聽取發音。如果沒聲音，請確認手機<strong>靜音開關</strong>已關閉喔！</p>
     </div>
 
     <section>
-        <h2>1. 基礎禮節與問候 (기본 인사)</h2>
+        <h2>1. 基礎禮節與問候</h2>
         <div class="card">
-            <div class="content">
-                <span class="kr">안녕하세요.</span>
-                <span class="rom">(An-nyeong-ha-se-yo)</span>
-                <span class="zh">你好。（萬用問候語）</span>
-            </div>
+            <div class="content"><span class="kr">안녕하세요.</span><span class="rom">(An-nyeong-ha-se-yo)</span><span class="zh">你好。</span></div>
             <button class="play-btn" onclick="speak('안녕하세요')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">감사합니다.</span>
-                <span class="rom">(Gam-sa-ham-ni-da)</span>
-                <span class="zh">謝謝。（最正式且安全的謝詞）</span>
-            </div>
+            <div class="content"><span class="kr">감사합니다.</span><span class="rom">(Gam-sa-ham-ni-da)</span><span class="zh">謝謝。</span></div>
             <button class="play-btn" onclick="speak('감사합니다')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">죄송합니다.</span>
-                <span class="rom">(Joe-song-ham-ni-da)</span>
-                <span class="zh">對不起 / 抱歉。</span>
-            </div>
+            <div class="content"><span class="kr">죄송합니다.</span><span class="rom">(Joe-song-ham-ni-da)</span><span class="zh">對不起。</span></div>
             <button class="play-btn" onclick="speak('죄송합니다')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">한국말 잘 못해요.</span>
-                <span class="rom">(Han-gung-mal jal mo-tae-yo)</span>
-                <span class="zh">我韓文說得不太好。</span>
-            </div>
+            <div class="content"><span class="kr">한국말 잘 못해요.</span><span class="rom">(Han-gung-mal jal mo-tae-yo)</span><span class="zh">我韓文說得不太好。</span></div>
             <button class="play-btn" onclick="speak('한국말 잘 못해요')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">잠시만요.</span>
-                <span class="rom">(Jam-si-man-yo)</span>
-                <span class="zh">請稍等一下 / 藉過。</span>
-            </div>
+            <div class="content"><span class="kr">잠시만요.</span><span class="rom">(Jam-si-man-yo)</span><span class="zh">請稍等 / 藉過。</span></div>
             <button class="play-btn" onclick="speak('잠시만요')">🔊 播放</button>
         </div>
     </section>
 
     <section>
-        <h2>2. 餐廳與咖啡廳 (식당 및 카페)</h2>
+        <h2>2. 餐廳與咖啡廳</h2>
         <div class="card">
-            <div class="content">
-                <span class="kr">여기 주문할게요.</span>
-                <span class="rom">(Yeo-gi ju-mun-hal-ge-yo)</span>
-                <span class="zh">這裡要點餐。</span>
-            </div>
+            <div class="content"><span class="kr">여기 주문할게요.</span><span class="zh">這裡要點餐。</span></div>
             <button class="play-btn" onclick="speak('여기 주문할게요')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">이거 하나랑 이거 하나 주세요.</span>
-                <span class="rom">(I-geo ha-na-rang i-geo ha-na ju-se-yo)</span>
-                <span class="zh">請給我一個這個和一個這個。</span>
-            </div>
+            <div class="content"><span class="kr">이거 하나랑 이거 하나 주세요.</span><span class="zh">請給我一個這個和一個這個。</span></div>
             <button class="play-btn" onclick="speak('이거 하나랑 이거 하나 주세요')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">덜 맵게 해 주실 수 있나요?</span>
-                <span class="rom">(Deol maep-ge hae ju-sil su in-na-yo?)</span>
-                <span class="zh">可以幫我做不那麼辣嗎？</span>
-            </div>
+            <div class="content"><span class="kr">덜 맵게 해 주실 수 있나요?</span><span class="zh">可以幫我做不那麼辣嗎？</span></div>
             <button class="play-btn" onclick="speak('덜 맵게 해 주실 수 있나요?')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">앞접시 좀 주시겠어요?</span>
-                <span class="rom">(Ap-jeop-si jom ju-si-get-eo-yo?)</span>
-                <span class="zh">可以給我一些小分裝盤嗎？</span>
-            </div>
+            <div class="content"><span class="kr">앞접시 좀 주시겠어요?</span><span class="zh">可以給我一些小分裝盤嗎？</span></div>
             <button class="play-btn" onclick="speak('앞접시 좀 주시겠어요?')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">잘 먹었습니다!</span>
-                <span class="rom">(Jal meog-eot-seum-ni-da)</span>
-                <span class="zh">我吃飽了/吃得很開心！</span>
-            </div>
+            <div class="content"><span class="kr">잘 먹었습니다!</span><span class="zh">我吃飽了！</span></div>
             <button class="play-btn" onclick="speak('잘 먹었습니다!')">🔊 播放</button>
         </div>
     </section>
 
     <section>
-        <h2>3. 購物與付款 (쇼핑 및 결제)</h2>
+        <h2>3. 購物與付款</h2>
         <div class="card">
-            <div class="content">
-                <span class="kr">얼마예요?</span>
-                <span class="rom">(Eol-ma-ye-yo?)</span>
-                <span class="zh">多少錢？</span>
-            </div>
+            <div class="content"><span class="kr">얼마예요?</span><span class="zh">多少錢？</span></div>
             <button class="play-btn" onclick="speak('얼마예요?')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">입어봐도 될까요?</span>
-                <span class="rom">(Ib-eo-bwa-do dwel-kka-yo?)</span>
-                <span class="zh">可以試穿嗎？</span>
-            </div>
+            <div class="content"><span class="kr">입어봐도 될까요?</span><span class="zh">可以試穿嗎？</span></div>
             <button class="play-btn" onclick="speak('입어봐도 될까요?')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">새 상품으로 있나요?</span>
-                <span class="rom">(Sae sang-pum-eu-ro in-na-yo?)</span>
-                <span class="zh">有新的（未拆封的）商品嗎？</span>
-            </div>
+            <div class="content"><span class="kr">새 상품으로 있나요?</span><span class="zh">有新的商品嗎？</span></div>
             <button class="play-btn" onclick="speak('새 상품으로 있나요?')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">봉투 하나 주세요.</span>
-                <span class="rom">(Bong-tu ha-na ju-se-yo)</span>
-                <span class="zh">請給我一個袋子。</span>
-            </div>
+            <div class="content"><span class="kr">봉투 하나 주세요.</span><span class="zh">請給我一個袋子。</span></div>
             <button class="play-btn" onclick="speak('봉투 하나 주세요')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">영수증 버려주세요.</span>
-                <span class="rom">(Yeong-su-jeung beo-ryeo-ju-se-yo)</span>
-                <span class="zh">請幫我把收據丟掉。</span>
-            </div>
+            <div class="content"><span class="kr">영수증 버려주세요.</span><span class="zh">請幫我把收據丟掉。</span></div>
             <button class="play-btn" onclick="speak('영수증 버려주세요')">🔊 播放</button>
         </div>
     </section>
 
     <section>
-        <h2>4. 交通與問路 (교통 및 길 찾기)</h2>
+        <h2>4. 交通與問路</h2>
         <div class="card">
-            <div class="content">
-                <span class="kr">어떻게 가요?</span>
-                <span class="rom">(... eo-tteok-ge ga-yo?)</span>
-                <span class="zh">～要怎麼去？</span>
-            </div>
+            <div class="content"><span class="kr">어떻게 가요?</span><span class="zh">要怎麼去？</span></div>
             <button class="play-btn" onclick="speak('어떻게 가요?')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">여기서 멀어요?</span>
-                <span class="rom">(Yeo-gi-seo meol-eo-yo?)</span>
-                <span class="zh">離這裡遠嗎？</span>
-            </div>
+            <div class="content"><span class="kr">여기서 멀어요?</span><span class="zh">離這裡遠嗎？</span></div>
             <button class="play-btn" onclick="speak('여기서 멀어요?')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">화장실이 어디에 있어요?</span>
-                <span class="rom">(Hwa-jang-sil-i eo-di-e it-eo-yo?)</span>
-                <span class="zh">廁所在哪裡？</span>
-            </div>
+            <div class="content"><span class="kr">화장실이 어디에 있어요?</span><span class="zh">廁所在哪裡？</span></div>
             <button class="play-btn" onclick="speak('화장실이 어디에 있어요?')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">교통카드 충전해 주세요.</span>
-                <span class="rom">(Gyo-tong-ka-deu chung-jeon-hae ju-se-yo)</span>
-                <span class="zh">請幫我的交通卡充值。</span>
-            </div>
+            <div class="content"><span class="kr">교통카드 충전해 주세요.</span><span class="zh">請幫我的交通卡充值。</span></div>
             <button class="play-btn" onclick="speak('교통카드 충전해 주세요')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">여기서 내려주세요.</span>
-                <span class="rom">(Yeo-gi-seo nae-ryeo-ju-se-yo)</span>
-                <span class="zh">請在這邊讓我下車。</span>
-            </div>
+            <div class="content"><span class="kr">여기서 내려주세요.</span><span class="zh">請在這邊讓我下車。</span></div>
             <button class="play-btn" onclick="speak('여기서 내려주세요')">🔊 播放</button>
         </div>
     </section>
 
     <section>
-        <h2>5. 拍照與求助 (사진 요청 및 도움)</h2>
+        <h2>5. 拍照與求助</h2>
         <div class="card">
-            <div class="content">
-                <span class="kr">사진 좀 찍어주실 수 있나요?</span>
-                <span class="rom">(Sa-jin jom jjik-eo-ju-sil su in-na-yo?)</span>
-                <span class="zh">可以幫我拍張照嗎？</span>
-            </div>
+            <div class="content"><span class="kr">사진 좀 찍어주실 수 있나요?</span><span class="zh">可以幫我拍張照嗎？</span></div>
             <button class="play-btn" onclick="speak('사진 좀 찍어주실 수 있나요?')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">한 번 더 찍어주세요.</span>
-                <span class="rom">(Han beon deo jjik-eo-ju-se-yo)</span>
-                <span class="zh">請再幫我拍一張。</span>
-            </div>
+            <div class="content"><span class="kr">한 번 더 찍어주세요.</span><span class="zh">請再幫我拍一張。</span></div>
             <button class="play-btn" onclick="speak('한 번 더 찍어주세요')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">와이파이 비밀번호가 뭐예요?</span>
-                <span class="rom">(Wa-i-pa-i bi-mil-beon-ho-ga mwo-ye-yo?)</span>
-                <span class="zh">WiFi 密碼是什麼？</span>
-            </div>
+            <div class="content"><span class="kr">와이파이 비밀번호가 뭐예요?</span><span class="zh">WiFi 密碼是什麼？</span></div>
             <button class="play-btn" onclick="speak('와이파이 비밀번호가 뭐예요?')">🔊 播放</button>
         </div>
         <div class="card">
-            <div class="content">
-                <span class="kr">다시 한번 말씀해 주시겠어요?</span>
-                <span class="rom">(Da-si han-beon mal-sseum-hae ju-si-get-eo-yo?)</span>
-                <span class="zh">可以請您再說一次嗎？</span>
-            </div>
+            <div class="content"><span class="kr">다시 한번 말씀해 주시겠어요?</span><span class="zh">可以請您再說一次嗎？</span></div>
             <button class="play-btn" onclick="speak('다시 한번 말씀해 주시겠어요?')">🔊 播放</button>
         </div>
         <div class="card">
+            <div class="content"><span class="kr">도와주세요!</span><span class="zh">請幫幫我！</span></div>
+            <button class="play-btn" onclick="speak('도와주세요')">🔊 播放</button>
+        </div>
+    </section>
+
+    <div class="tip-box">
+        <h3>💡 小提醒：</h3>
+        <p>如果按下播放沒聲音，請確認：<br>
+        1. 手機是否切換到<strong>響鈴模式</strong>（iPhone 側邊開關）。<br>
+        2. 媒體音量是否已調大。<br>
+        3. 建議使用 <strong>Safari 或 Chrome</strong> 瀏覽器效果最好。</p>
+    </div>
+
+    <footer>
+        <p>© 2024 韓語旅遊互動指南</p>
+    </footer>
+</div>
+
+<script>
+    let voices = [];
+
+    // 初始化語音清單
+    function loadVoices() {
+        voices = window.speechSynthesis.getVoices();
+    }
+
+    if ('speechSynthesis' in window) {
+        loadVoices();
+        // 針對 Chrome 的異步載入
+        window.speechSynthesis.onvoiceschanged = loadVoices;
+    }
+
+    function speak(text) {
+        if ('speechSynthesis' in window) {
+            // 先停止正在播放的（防止卡死）
+            window.speechSynthesis.cancel();
+
+            const msg = new SpeechSynthesisUtterance();
+            msg.text = text;
+            msg.lang = 'ko-KR'; // 設定韓文
+            msg.rate = 0.8;      // 語速稍微慢一點點
+            
+            // 嘗試尋找韓文發音人
+            const koVoice = voices.find(v => v.lang === 'ko-KR' || v.lang.includes('Korean'));
+            if (koVoice) msg.voice = koVoice;
+
+            window.speechSynthesis.speak(msg);
+        } else {
+            alert("您的瀏覽器不支援語音播放");
+        }
+    }
+</script>
+</body>
+</html>
