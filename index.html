@@ -3,307 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>韓語旅遊急救包 - 互動學習網頁</title>
+    <title>韓語旅遊急救包 - 互動學習版</title>
     <style>
         :root {
             --primary-color: #ff4757;
             --secondary-color: #2f3542;
-            --bg-color: #f1f2f6;
+            --bg-color: #f8f9fa;
             --card-bg: #ffffff;
+            --accent-color: #57606f;
         }
 
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif, "Microsoft JhengHei";
             background-color: var(--bg-color);
             color: var(--secondary-color);
-            line-height: 1.6;
+            line-height: 1.5;
             margin: 0;
-            padding: 20px;
+            padding: 15px;
         }
 
         .container {
-            max-width: 800px;
+            max-width: 600px;
             margin: 0 auto;
         }
 
         header {
             text-align: center;
-            padding: 20px 0;
+            padding: 30px 15px;
             background: linear-gradient(135deg, #ff4757, #ff6b81);
             color: white;
-            border-radius: 15px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(255, 71, 87, 0.3);
         }
+
+        h1 { margin: 0; font-size: 1.8rem; }
+        header p { margin: 10px 0 0; opacity: 0.9; }
 
         .intro {
             background: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 25px;
             border-left: 5px solid var(--primary-color);
+            font-size: 0.95rem;
         }
 
         h2 {
             color: var(--primary-color);
-            border-bottom: 2px solid var(--primary-color);
-            padding-bottom: 10px;
-            margin-top: 40px;
+            font-size: 1.3rem;
+            margin: 30px 0 15px;
+            padding-left: 10px;
+            border-left: 4px solid var(--primary-color);
         }
 
         .card {
             background: var(--card-bg);
-            border-radius: 12px;
-            padding: 15px 20px;
-            margin-bottom: 15px;
+            border-radius: 15px;
+            padding: 18px;
+            margin-bottom: 12px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            transition: all 0.2s ease;
         }
 
-        .card:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        .card:active {
+            transform: scale(0.98);
+            background-color: #fffafa;
         }
 
         .content {
             flex: 1;
+            padding-right: 10px;
         }
 
         .kr {
-            font-size: 1.2rem;
-            font-weight: bold;
-            color: #2f3542;
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: #000;
             display: block;
+            margin-bottom: 4px;
         }
 
         .rom {
             font-size: 0.9rem;
-            color: #747d8c;
+            color: #ff4757;
+            font-family: Georgia, serif;
+            display: block;
+            margin-bottom: 6px;
             font-style: italic;
         }
 
         .zh {
-            font-size: 1rem;
-            color: #57606f;
+            font-size: 0.95rem;
+            color: var(--accent-color);
             display: block;
-            margin-top: 5px;
         }
 
         .play-btn {
             background-color: var(--primary-color);
             color: white;
             border: none;
-            border-radius: 50px;
-            padding: 10px 20px;
+            border-radius: 12px;
+            width: 70px;
+            height: 70px;
             cursor: pointer;
             font-weight: bold;
             display: flex;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
             gap: 5px;
             transition: background 0.3s;
+            flex-shrink: 0;
             -webkit-tap-highlight-color: transparent;
         }
 
-        .play-btn:hover {
-            background-color: #ff6b81;
-        }
-
-        .tip-box {
-            background-color: #dfe4ea;
-            padding: 20px;
-            border-radius: 10px;
-            margin-top: 40px;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 50px;
-            color: #a4b0be;
-            font-size: 0.8rem;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <header>
-        <h1>🇰🇷 韓語旅遊急救包</h1>
-        <p>首爾在地語語音指南</p>
-    </header>
-
-    <div class="intro">
-        <p>안녕하세요! 點擊播放按鈕即可聽取發音。如果沒聲音，請確認手機<strong>靜音開關</strong>已關閉喔！</p>
-    </div>
-
-    <section>
-        <h2>1. 基礎禮節與問候</h2>
-        <div class="card">
-            <div class="content"><span class="kr">안녕하세요.</span><span class="rom">(An-nyeong-ha-se-yo)</span><span class="zh">你好。</span></div>
-            <button class="play-btn" onclick="speak('안녕하세요')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">감사합니다.</span><span class="rom">(Gam-sa-ham-ni-da)</span><span class="zh">謝謝。</span></div>
-            <button class="play-btn" onclick="speak('감사합니다')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">죄송합니다.</span><span class="rom">(Joe-song-ham-ni-da)</span><span class="zh">對不起。</span></div>
-            <button class="play-btn" onclick="speak('죄송합니다')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">한국말 잘 못해요.</span><span class="rom">(Han-gung-mal jal mo-tae-yo)</span><span class="zh">我韓文說得不太好。</span></div>
-            <button class="play-btn" onclick="speak('한국말 잘 못해요')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">잠시만요.</span><span class="rom">(Jam-si-man-yo)</span><span class="zh">請稍等 / 藉過。</span></div>
-            <button class="play-btn" onclick="speak('잠시만요')">🔊 播放</button>
-        </div>
-    </section>
-
-    <section>
-        <h2>2. 餐廳與咖啡廳</h2>
-        <div class="card">
-            <div class="content"><span class="kr">여기 주문할게요.</span><span class="zh">這裡要點餐。</span></div>
-            <button class="play-btn" onclick="speak('여기 주문할게요')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">이거 하나랑 이거 하나 주세요.</span><span class="zh">請給我一個這個和一個這個。</span></div>
-            <button class="play-btn" onclick="speak('이거 하나랑 이거 하나 주세요')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">덜 맵게 해 주실 수 있나요?</span><span class="zh">可以幫我做不那麼辣嗎？</span></div>
-            <button class="play-btn" onclick="speak('덜 맵게 해 주실 수 있나요?')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">앞접시 좀 주시겠어요?</span><span class="zh">可以給我一些小分裝盤嗎？</span></div>
-            <button class="play-btn" onclick="speak('앞접시 좀 주시겠어요?')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">잘 먹었습니다!</span><span class="zh">我吃飽了！</span></div>
-            <button class="play-btn" onclick="speak('잘 먹었습니다!')">🔊 播放</button>
-        </div>
-    </section>
-
-    <section>
-        <h2>3. 購物與付款</h2>
-        <div class="card">
-            <div class="content"><span class="kr">얼마예요?</span><span class="zh">多少錢？</span></div>
-            <button class="play-btn" onclick="speak('얼마예요?')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">입어봐도 될까요?</span><span class="zh">可以試穿嗎？</span></div>
-            <button class="play-btn" onclick="speak('입어봐도 될까요?')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">새 상품으로 있나요?</span><span class="zh">有新的商品嗎？</span></div>
-            <button class="play-btn" onclick="speak('새 상품으로 있나요?')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">봉투 하나 주세요.</span><span class="zh">請給我一個袋子。</span></div>
-            <button class="play-btn" onclick="speak('봉투 하나 주세요')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">영수증 버려주세요.</span><span class="zh">請幫我把收據丟掉。</span></div>
-            <button class="play-btn" onclick="speak('영수증 버려주세요')">🔊 播放</button>
-        </div>
-    </section>
-
-    <section>
-        <h2>4. 交通與問路</h2>
-        <div class="card">
-            <div class="content"><span class="kr">어떻게 가요?</span><span class="zh">要怎麼去？</span></div>
-            <button class="play-btn" onclick="speak('어떻게 가요?')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">여기서 멀어요?</span><span class="zh">離這裡遠嗎？</span></div>
-            <button class="play-btn" onclick="speak('여기서 멀어요?')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">화장실이 어디에 있어요?</span><span class="zh">廁所在哪裡？</span></div>
-            <button class="play-btn" onclick="speak('화장실이 어디에 있어요?')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">교통카드 충전해 주세요.</span><span class="zh">請幫我的交通卡充值。</span></div>
-            <button class="play-btn" onclick="speak('교통카드 충전해 주세요')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">여기서 내려주세요.</span><span class="zh">請在這邊讓我下車。</span></div>
-            <button class="play-btn" onclick="speak('여기서 내려주세요')">🔊 播放</button>
-        </div>
-    </section>
-
-    <section>
-        <h2>5. 拍照與求助</h2>
-        <div class="card">
-            <div class="content"><span class="kr">사진 좀 찍어주실 수 있나요?</span><span class="zh">可以幫我拍張照嗎？</span></div>
-            <button class="play-btn" onclick="speak('사진 좀 찍어주실 수 있나요?')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">한 번 더 찍어주세요.</span><span class="zh">請再幫我拍一張。</span></div>
-            <button class="play-btn" onclick="speak('한 번 더 찍어주세요')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">와이파이 비밀번호가 뭐예요?</span><span class="zh">WiFi 密碼是什麼？</span></div>
-            <button class="play-btn" onclick="speak('와이파이 비밀번호가 뭐예요?')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">다시 한번 말씀해 주시겠어요?</span><span class="zh">可以請您再說一次嗎？</span></div>
-            <button class="play-btn" onclick="speak('다시 한번 말씀해 주시겠어요?')">🔊 播放</button>
-        </div>
-        <div class="card">
-            <div class="content"><span class="kr">도와주세요!</span><span class="zh">請幫幫我！</span></div>
-            <button class="play-btn" onclick="speak('도와주세요')">🔊 播放</button>
-        </div>
-    </section>
-
-    <div class="tip-box">
-        <h3>💡 小提醒：</h3>
-        <p>如果按下播放沒聲音，請確認：<br>
-        1. 手機是否切換到<strong>響鈴模式</strong>（iPhone 側邊開關）。<br>
-        2. 媒體音量是否已調大。<br>
-        3. 建議使用 <strong>Safari 或 Chrome</strong> 瀏覽器效果最好。</p>
-    </div>
-
-    <footer>
-        <p>© 2024 韓語旅遊互動指南</p>
-    </footer>
-</div>
-
-<script>
-    let voices = [];
-
-    // 初始化語音清單
-    function loadVoices() {
-        voices = window.speechSynthesis.getVoices();
-    }
-
-    if ('speechSynthesis' in window) {
-        loadVoices();
-        // 針對 Chrome 的異步載入
-        window.speechSynthesis.onvoiceschanged = loadVoices;
-    }
-
-    function speak(text) {
-        if ('speechSynthesis' in window) {
-            // 先停止正在播放的（防止卡死）
-            window.speechSynthesis.cancel();
-
-            const msg = new SpeechSynthesisUtterance();
-            msg.text = text;
-            msg.lang = 'ko-KR'; // 設定韓文
-            msg.rate = 0.8;      // 語速稍微慢一點點
-            
-            // 嘗試尋找韓文發音人
-            const koVoice = voices.find(v => v.lang === 'ko-KR' || v.lang.includes('Korean'));
-            if (koVoice) msg.voice = koVoice;
-
-            window.speechSynthesis.speak(msg);
-        } else {
-            alert("您的瀏覽器不支援語音播放");
-        }
-    }
-</script>
-</body>
-</html>
+        .play-btn span { font-size: 1.5rem; }
+        .play-btn small { font-size:
